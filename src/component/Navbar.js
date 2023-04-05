@@ -20,7 +20,7 @@ const NavScrollExample = () => {
                       <li className='nav-item active m-1'><NavLink to="/Services">Services</NavLink></li>
                       <li className='nav-item active m-1'><NavLink to="/Services">Portofolio</NavLink></li>
 
-                      <li className='nav-item active m-1'><NavLink to="/Services">Contact </NavLink></li>
+                      <li className='nav-item active m-1'><NavLink to="/Contact">Contact </NavLink></li>
                   </ul>
               </div>
           </div>

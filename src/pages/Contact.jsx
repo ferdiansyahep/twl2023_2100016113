@@ -1,15 +1,14 @@
-import ServicesPage from '../component/Services';
+import ContactPage from '../component/Contact';
 import NavScrollExample from '../component/Navbar';
-
-const Services = () =>{
+const Contact = () =>{
     return(
         <div className="App">
         <NavScrollExample />
 
-        <ServicesPage />
+        <ContactPage />
         {/* <h1>Hello, World!</h1> */}
       </div>
     )
 }
 
-export default Services 
+export default Contact 
