@@ -22,7 +22,7 @@ const Contactme = () => {
                 <Form.Label>Message</Form.Label>
                 <Form.Control as="textarea" rows={3} placeholder="Enter your message" />
               </Form.Group>
-              <Button variant="primary" type="submit">Submit</Button>
+              <Button variant="primary mt-3" type="submit">Submit</Button>
             </Form>
           </Col>
         </Row>
