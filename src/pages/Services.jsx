@@ -1,6 +1,6 @@
 import ServicesPage from '../component/Services';
 import NavScrollExample from '../component/Navbar';
-
+import Footer from '../component/Footer';
 const Services = () =>{
     return(
         <div className="App">
@@ -8,6 +8,9 @@ const Services = () =>{
 
         <ServicesPage />
         {/* <h1>Hello, World!</h1> */}
+        <div>
+          <Footer/>
+        </div>
       </div>
     )
 }

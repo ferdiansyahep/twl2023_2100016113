@@ -36,3 +36,63 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* contact */
+.app-container {
+  background-color: #007bff;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+.navbar {
+  background-color: #fff; /* mengatur warna background navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* menambahkan shadow pada navbar */
+  padding: 1rem 0; /* memberikan padding pada navbar */
+}
+
+.navbar-brand {
+  color: #4c4c4c; /* mengatur warna teks pada navbar brand */
+  font-weight: bold; /* memberikan ketebalan teks pada navbar brand */
+}
+
+.nav-link {
+  color: #4c4c4c; /* mengatur warna teks pada navbar link */
+  font-weight: 500; /* memberikan ketebalan teks pada navbar link */
+  margin-right: 1.5rem; /* memberikan margin kanan pada navbar link */
+}
+
+.nav-link:hover {
+  color: #007bff; /* mengatur warna teks navbar link saat dihover */
+}
+
+.navbar-toggler-icon {
+  background-color: #4c4c4c; /* mengatur warna icon navbar toggler */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-top: 1rem; /* memberikan margin top pada navbar menu saat responsive */
+  }
+
+  .nav-link {
+    margin-right: 0; /* menghapus margin kanan pada navbar link saat responsive */
+    margin-bottom: 0.5rem; /* memberikan margin bottom pada navbar link saat responsive */
+  }
+}
+
+.about-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.outputp{
+  padding-top: 30px;
+}

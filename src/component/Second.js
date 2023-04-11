@@ -1,16 +1,80 @@
-import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Form, Button, Table ,Row, Col } from 'react-bootstrap';
 
-const AboutPage = () => {
+function AboutPage() {
+  
+  const [data, setData] = useState([]);
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setData([...data, { name, age }]);
+    setName('');
+    setAge('');
+  };
+
+  const handleDelete = (index) => {
+    const newData = [...data];
+    newData.splice(index, 1);
+    setData(newData);
+  };
+
   return (
-    <Container className='justyfi-content-center'>
-        <Col sm={12} md={6}>
-          <h2>About Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum lorem eu mauris ultrices faucibus. Sed auctor nunc sed ex laoreet, id commodo sapien faucibus. Maecenas eu ex sed justo feugiat dignissim vel non velit. Duis non ex vel lorem bibendum mollis. </p>
-          <p>Proin ultrices velit vel turpis porttitor, non mollis dolor tincidunt. Duis vitae mauris vel nunc semper tincidunt id at massa. Ut nec urna a ipsum euismod dictum. Praesent consequat sapien eget mi vehicula malesuada. Nulla facilisi.</p>
-        </Col>
+    <div className="about-container">
+
+    <Container>
+      
+      
+      <h1>Data Siswa</h1>
+      <Row>
+      <Col >
+      <Form onSubmit={handleSubmit}>
+        <Form.Group controlId="formName">
+          <Form.Label>Nama</Form.Label>
+          <Form.Control type="text" placeholder="Masukkan Nama" value={name} onChange={(event) => setName(event.target.value)} />
+        </Form.Group>
+
+        <Form.Group controlId="formAge">
+          <Form.Label>Usia</Form.Label>
+          <Form.Control type="number" placeholder="Masukkan Usia" value={age} onChange={(event) => setAge(event.target.value)} />
+        </Form.Group>
+
+        <Button variant="primary mt-3" type="submit">
+          Tambah Data
+        </Button>
+      </Form>
+      </Col>
+      <Col className='outputp' >
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nama</th>
+            <th>Usia</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{item.name}</td>
+              <td>{item.age}</td>
+              <td>
+                <Button variant="danger" onClick={() => handleDelete(index)}>
+                  Hapus
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      </Col>
+      </Row>
     </Container>
+    </div> 
   );
-};
+}
 
 export default AboutPage;

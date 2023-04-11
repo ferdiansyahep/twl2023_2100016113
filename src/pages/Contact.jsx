@@ -1,12 +1,16 @@
-import ContactPage from '../component/Contact';
+import Contactme from '../component/Contact';
 import NavScrollExample from '../component/Navbar';
+import Footer from '../component/Footer';
 const Contact = () =>{
     return(
         <div className="App">
         <NavScrollExample />
 
-        <ContactPage />
+        <Contactme />
         {/* <h1>Hello, World!</h1> */}
+        <div>
+          <Footer/>
+        </div>
       </div>
     )
 }
