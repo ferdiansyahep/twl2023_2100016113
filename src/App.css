@@ -96,3 +96,70 @@
 .outputp{
   padding-top: 30px;
 }
+
+/* Judul */
+.custom-title {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.custom-title::before {
+  background-color: rgba(255, 255, 255, 0.1);
+  content: '';
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.custom-title:hover::before {
+  animation: move 1s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+    right: 100%;
+  }
+
+  to {
+    left: 100%;
+    right: 0;
+  }
+}
+
+/* Kartu API*/
+.custom-card {
+  background-color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+}
+
+.custom-card:hover .card-title {
+  color: #0099cc;
+}
+
+.custom-card .card-title {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-card .card-text {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 400;
+}

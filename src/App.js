@@ -5,6 +5,8 @@ import About from './pages/About';
 import './App.css';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Json from "./pages/Jsonxample";
+
 
 const App = ()=> {
   return (
@@ -14,10 +16,11 @@ const App = ()=> {
         <Route path='/About' element={<About/>}/ >
         <Route path='/Services' element={<Services/>}/ >
         <Route path='/Contact' element={<Contact/>}/ >
+        <Route path='/Jsonxample' element={<Json/>}/ >
       </Routes>
     </Router>
   );
-}
+};
 
 
 

@@ -8,7 +8,6 @@ const About = () =>{
         <NavScrollExample />
 
         <Aboutus />
-        {/* <h1>Hello, World!</h1> */}
         <div>
           <Footer/>
         </div>
